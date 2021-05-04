@@ -1,0 +1,82 @@
+﻿<Page x:Class="LabWork10_ado.ObservInfo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LabWork10_ado" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ObservInfo"
+      Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!--выбор фото-->
+        <StackPanel Grid.Column="0">
+            <Image Margin="2 2 2 2"
+                   Source="C:\Users\Anton\source\repos\pacei_NV_OOTP\лабораторные\решения\LabWork10_ado\images\Add.png"
+                   Width="387"
+                   x:Name="image">
+            </Image>
+        </StackPanel>
+        <!--поля user-->
+        <StackPanel Grid.Column="1">
+            <Border BorderThickness="5" 
+                    BorderBrush="Black"
+                    CornerRadius="10">
+                <StackPanel Margin="2 2 2 2">
+                    <Label Content="Name" 
+                           Margin="0 0 0 0"/>
+                    <TextBox x:Name="nameInput" 
+                             BorderBrush="White"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="5" 
+                    BorderBrush="Black"
+                    CornerRadius="10"
+                    Margin="0 2 0 0">
+                <StackPanel Margin="2 2 2 2">
+                    <Label Content="LastName" 
+                           Margin="0 0 0 0"/>
+                    <TextBox x:Name="lastNameInput"
+                             BorderBrush="White"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="5" 
+                    BorderBrush="Black"
+                    CornerRadius="10"
+                    Margin="0 2 0 0">
+                <StackPanel Margin="2 2 2 2">
+                    <Label Content="Mail Adress" 
+                           Margin="0 0 0 0"/>
+                    <TextBox x:Name="mailAdressInput"
+                             BorderBrush="White"/>
+                </StackPanel>
+            </Border>
+
+            <Border BorderThickness="5" 
+                    BorderBrush="Black"
+                    CornerRadius="10"
+                    Margin="0 2 0 0">
+                <StackPanel Margin="2 2 2 2">
+                    <Label x:Name="birthday" Content="Birthday" 
+                           Margin="0 0 0 0"/>
+                    <DatePicker x:Name="birthdayInput"/>
+                </StackPanel>
+            </Border>
+            <Button Content="next" Command="{Binding Next}"
+                    Margin="3 3 3 3"/>
+            <Button Content="privious" Command="{Binding Privious}"
+                    Margin="3 3 3 3"/>
+            <Button Content="Edit" Command="{Binding Edit}" 
+                    Margin="3 3 3 3"/>
+            <Button Content="Delete" Command="{Binding Delete}" 
+                    Margin="3 3 3 3"/>
+        </StackPanel>
+    </Grid>
+</Page>
